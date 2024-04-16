@@ -72,7 +72,7 @@ const CheckboxIOS = ({
       accessibilityRole="checkbox"
       accessibilityState={{ disabled, checked }}
       accessibilityLiveRegion="polite"
-      style={styles.container}
+      style={styles(theme).container}
       testID={testID}
       theme={theme}
     >
@@ -91,10 +91,13 @@ const CheckboxIOS = ({
 
 CheckboxIOS.displayName = 'Checkbox.IOS';
 
-const styles = StyleSheet.create({
+const styles =  (theme) => StyleSheet.create({
   container: {
-    borderRadius: 18,
-    padding: 6,
+    borderRadius: 5,
+    padding: 1,
+    margin:6,
+    borderWidth:1,
+    borderColor:theme.colors.secondary
   },
 });
 
